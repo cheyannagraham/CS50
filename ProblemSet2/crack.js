@@ -4,23 +4,23 @@
 
 
 const crack = (string) => {
-    let permutDig = 1;
-    let key = [];
+    let permutIdx = 0;
+    let permutation = [];
     let count = 0;
     let strLen = string.length;
 
-    // Recursive set permutate digits < 1
-    const setDigits = digits => {
+    // Recursively permutate index < 1
+    const setIndex = index => {
         for (let i = 0; i < strLen; i++) {
             // set current value
-            key[digits] = string[i];
+            permutation[index] = string[i];
 
-            // change the prev digits
-            if (digits > 1) {
-                setDigits(digits - 1);
+            // change the prev index
+            if (index > 0) {
+                setIndex(index - 1);
             }
             else {
-                console.log(key.join(""));
+                console.log(permutation.join(""));
             }
         }
     }
@@ -28,20 +28,20 @@ const crack = (string) => {
     while (count < strLen) {
         for (let i = 0; i < strLen; i++) {
 
-            key[permutDig] = string[i];
-            if (permutDig < 2) {
-                console.log(key.join(""));
+            permutation[permutIdx] = string[i];
+            if (permutIdx < 1) {
+                console.log(permutation.join(""));
             }
         }
         // At end of string, add digit
-        permutDig++;
-        if (permutDig > strLen) {
+        permutIdx++;
+        if (permutIdx >= strLen) {
             break;
         } else {
-            setDigits(permutDig);
+            setIndex(permutIdx);
         }
         count++;
     }
 }
 
-crack('ABC');
+crack('AB');
