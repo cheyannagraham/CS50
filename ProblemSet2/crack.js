@@ -4,7 +4,7 @@
 
 
 const crack = (string) => {
-    let permut_dig = 1;
+    let permutDig = 1;
     let key = [];
     let count = 0;
     
@@ -16,17 +16,17 @@ const crack = (string) => {
             // loop through length of string
             for (let i = 0; i < string.length; i++) {
                 
-                key[permut_dig] = string[i];
-                if (permut_dig < 2) {
+                key[permutDig] = string[i];
+                if (permutDig < 2) {
                     console.log(key.join(""));
                 }
             }
             // At end of string, add digit
-            permut_dig++;
-            if (permut_dig > string.length) {
+            permutDig++;
+            if (permutDig > string.length) {
                 break;
             } else {
-                setDigits(permut_dig);
+                setDigits(permutDig);
             }
             count++;
         }
