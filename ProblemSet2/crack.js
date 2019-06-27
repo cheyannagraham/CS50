@@ -9,7 +9,7 @@ const crack = (string) => {
     let count = 0;
     let strLen = string.length;
 
-    // Recursively permutate index < 1
+    // Recursively permutate previous indices
     const setIndex = index => {
         for (let i = 0; i < strLen; i++) {
             // set current value
