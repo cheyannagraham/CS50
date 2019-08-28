@@ -1,4 +1,4 @@
-// Compare search and sorting algorithms
+// Compare running time for search and sorting algorithms
 // Cheyanna Graham
 // June 10, 2019
 
@@ -102,6 +102,7 @@ const merge = ([left, right]) => {
     return newArr;
 };
 
+// Time function executions
 const timer = (funcs) => {
 
     funcs.forEach(f => {
