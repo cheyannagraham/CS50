@@ -218,5 +218,3 @@ int count(struct node *n)
     }
     return total;
 }
-
-// idea, pass in just children,
