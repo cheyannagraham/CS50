@@ -1,4 +1,4 @@
-// Compare running time for search and sorting algorithms
+// Compare running time for sorting algorithms
 // Cheyanna Graham
 // June 10, 2019
 
